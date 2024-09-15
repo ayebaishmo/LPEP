@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+            /* width: 100%; */
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Customers</h1>
+    <table>
+        <tr>
+            <th>Customer ID</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Location</th>
+            <th>Purchase History</th>
+            <th>Loyality Program</th>
+            <th>Product Purchased</th>
+            <th>Browsing History</th>
+            <th>Search Queries</th>
+            <th>Social Media Active</th>
+            <th>Email Open Rate</th>
+            <th>Avg Order Value</th>
+        </tr>
+        {% for customer in customers %}
+        <tr>
+            <td>{{ customer.customer_id }}</td>
+            <td>{{ customer.age }}</td>
+            <td>{{ customer.gender }}</td>
+            <td>{{ customer.location }}</td>
+            <td>{{ customer.Purchase_history }}</td>
+            <td>{{ customer.loyality_program }}</td>
+            <td>{{ customer.product_purchased }}</td>
+            <td>{{ customer.browsing_history }}</td>
+            <td>{{ customer.search_queries }}</td>
+            <td>{{ customer.social_media_active }}</td>
+            <td>{{ customer.email_open_rate }}</td>
+            <td>{{ customer.avg_order_value }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
